@@ -1,5 +1,5 @@
 {
-  "name": "TicTacToe-Node",
+  "name": "yasuo-node",
   "version": "0.0.1",
   "description": "TicTacToe implementation in NodeJS",
   "main": "server.js",
@@ -13,6 +13,6 @@
   "author": "Rusty Mina",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.8.2",
+    "express": "^4.8.2"
   }
 }
