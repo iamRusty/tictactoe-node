@@ -2,13 +2,25 @@ var http = require('http');
 var fs = require('fs');
 var url = require('url');
 
-var port = process.env.PORT || 8081 
+var port = process.env.PORT || 8082 
 
 // Create a server
-http.createServer( function (request, response) {  
+http.createServer( function (request, response) {
    // Parse the request containing file name
    var pathname = url.parse(request.url).pathname;
-   
+
+   if (pathname == "/"){
+       response.writeHead(302,{
+           Location: 'data/index.html'
+       });
+       response.end();
+   }
+   else if (pathname == "/data"){
+       response.writeHead(302,{
+           Location: 'data/index.html'
+       });
+       response.end();
+   }
    // Print the name of the file for which request is made.
    console.log("Request for " + pathname + " received.");
 
@@ -50,4 +62,4 @@ http.createServer( function (request, response) {
 }).listen(port);
 
 // Console will print the message
-console.log('Server running at http://127.0.0.1:8081/');
+console.log('Server running at http://127.0.0.1:8082/');
