@@ -2,6 +2,7 @@ var http = require('http');
 var fs = require('fs');
 var url = require('url');
 
+var port = process.env.PORT || 8081 
 
 // Create a server
 http.createServer( function (request, response) {  
@@ -46,7 +47,7 @@ http.createServer( function (request, response) {
       // Send the response body 
       response.end();
    });   
-}).listen(8081);
+}).listen(port);
 
 // Console will print the message
 console.log('Server running at http://127.0.0.1:8081/');
